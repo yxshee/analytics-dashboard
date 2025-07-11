@@ -1,4 +1,3 @@
-// Dashboard Application JavaScript
 class DashboardApp {
     constructor() {
         this.data = null;
@@ -16,26 +15,20 @@ class DashboardApp {
 
     async init() {
         try {
-            // Show loading overlay
             this.showLoading();
             
-            // Load data
             await this.loadData();
             
-            // Initialize theme
             this.initializeTheme();
             
-            // Initialize components
             this.initializeMetrics();
             this.initializeCharts();
             this.initializeTable();
             this.initializeInsights();
             this.initializeEventListeners();
             
-            // Start real-time updates
             this.startRealTimeUpdates();
             
-            // Hide loading overlay
             setTimeout(() => this.hideLoading(), 1500);
             
         } catch (error) {
@@ -45,7 +38,6 @@ class DashboardApp {
     }
 
     async loadData() {
-        // Using the provided JSON data structure
         this.data = {
             "overview_metrics": {
                 "revenue": {
@@ -250,7 +242,6 @@ class DashboardApp {
         localStorage.setItem('theme', this.theme);
         this.updateThemeIcon();
         
-        // Update charts for theme change
         setTimeout(() => {
             this.updateChartsForTheme();
         }, 100);
@@ -268,11 +259,10 @@ class DashboardApp {
     initializeMetrics() {
         const metrics = this.data.overview_metrics;
         
-        // Animate metric values with proper formatting
         this.animateMetricValue('revenueValue', 0, metrics.revenue.current, '$', true);
         this.animateMetricValue('usersValue', 0, metrics.users.current, '', true);
         this.animateMetricValue('conversionsValue', 0, metrics.conversions.current);
-        this.animateMetricValue('growthValue', 0, metrics.growth_rate.current, '', false, true); // Added percentage flag
+        this.animateMetricValue('growthValue', 0, metrics.growth_rate.current, '', false, true);
     }
 
     animateMetricValue(elementId, start, end, prefix = '', addCommas = false, isPercentage = false) {
@@ -290,11 +280,11 @@ class DashboardApp {
                 clearInterval(timer);
             }
 
-            let displayValue = Math.floor(current * 10) / 10; // Round to 1 decimal place
+            let displayValue = Math.floor(current * 10) / 10;
             if (addCommas) {
                 displayValue = Math.floor(current).toLocaleString();
             } else if (isPercentage) {
-                displayValue = current.toFixed(1); // Fixed to 1 decimal place for percentages
+                displayValue = current.toFixed(1);
             }
             
             const suffix = isPercentage ? '%' : '';
@@ -612,7 +602,6 @@ class DashboardApp {
     filterAndSearch() {
         let filtered = [...this.data.top_campaigns];
 
-        // Apply search filter
         if (this.searchQuery) {
             filtered = filtered.filter(campaign => 
                 campaign.name.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
@@ -620,7 +609,6 @@ class DashboardApp {
             );
         }
 
-        // Apply type filter
         if (this.typeFilter) {
             filtered = filtered.filter(campaign => campaign.type === this.typeFilter);
         }
@@ -660,17 +648,14 @@ class DashboardApp {
     }
 
     updateSortIcons() {
-        // Reset all sort icons
         document.querySelectorAll('.sortable i').forEach(icon => {
             icon.className = 'fas fa-sort';
         });
 
-        // Reset sorted class
         document.querySelectorAll('.sortable.sorted').forEach(header => {
             header.classList.remove('sorted');
         });
 
-        // Update current sort icon
         const currentHeader = document.querySelector(`[data-sort="${this.currentSort.field}"]`);
         if (currentHeader) {
             const icon = currentHeader.querySelector('i');
@@ -739,7 +724,6 @@ class DashboardApp {
     }
 
     initializeEventListeners() {
-        // Theme toggle - Fixed event binding
         const themeToggle = document.getElementById('themeToggle');
         if (themeToggle) {
             themeToggle.addEventListener('click', (e) => {
@@ -748,7 +732,6 @@ class DashboardApp {
             });
         }
 
-        // Search input
         const searchInput = document.getElementById('searchInput');
         if (searchInput) {
             let searchTimeout;
@@ -761,7 +744,6 @@ class DashboardApp {
             });
         }
 
-        // Type filter
         const typeFilter = document.getElementById('typeFilter');
         if (typeFilter) {
             typeFilter.addEventListener('change', (e) => {
@@ -770,7 +752,6 @@ class DashboardApp {
             });
         }
 
-        // Table sorting
         document.querySelectorAll('.sortable').forEach(header => {
             header.addEventListener('click', () => {
                 const field = header.getAttribute('data-sort');
@@ -778,7 +759,6 @@ class DashboardApp {
             });
         });
 
-        // Pagination
         const prevButton = document.getElementById('prevPage');
         const nextButton = document.getElementById('nextPage');
 
@@ -805,7 +785,6 @@ class DashboardApp {
     }
 
     startRealTimeUpdates() {
-        // Simulate real-time updates every 30 seconds
         setInterval(() => {
             this.updateMetricsWithRandomVariation();
         }, 30000);
@@ -814,7 +793,6 @@ class DashboardApp {
     updateMetricsWithRandomVariation() {
         const metrics = this.data.overview_metrics;
         
-        // Add small random variations to metrics
         const variations = {
             revenue: Math.floor(Math.random() * 1000) - 500,
             users: Math.floor(Math.random() * 20) - 10,
@@ -822,30 +800,25 @@ class DashboardApp {
             growth_rate: (Math.random() * 0.4) - 0.2
         };
 
-        // Update values with variations
         metrics.revenue.current += variations.revenue;
         metrics.users.current += variations.users;
         metrics.conversions.current += variations.conversions;
         metrics.growth_rate.current += variations.growth_rate;
 
-        // Ensure positive values
         metrics.revenue.current = Math.max(metrics.revenue.current, 50000);
         metrics.users.current = Math.max(metrics.users.current, 5000);
         metrics.conversions.current = Math.max(metrics.conversions.current, 100);
         metrics.growth_rate.current = Math.max(metrics.growth_rate.current, 0);
 
-        // Recalculate growth percentages
         metrics.revenue.growth = ((metrics.revenue.current - metrics.revenue.previous) / metrics.revenue.previous * 100);
         metrics.users.growth = ((metrics.users.current - metrics.users.previous) / metrics.users.previous * 100);
         metrics.conversions.growth = ((metrics.conversions.current - metrics.conversions.previous) / metrics.conversions.previous * 100);
 
-        // Update display
         this.updateMetricDisplay('revenue', metrics.revenue);
         this.updateMetricDisplay('users', metrics.users);
         this.updateMetricDisplay('conversions', metrics.conversions);
         this.updateMetricDisplay('growth', metrics.growth_rate);
 
-        // Show update indicator
         this.showUpdateIndicator();
     }
 
@@ -867,7 +840,6 @@ class DashboardApp {
             
             valueElement.textContent = displayValue;
             
-            // Add pulse animation
             valueElement.style.animation = 'none';
             setTimeout(() => {
                 valueElement.style.animation = 'pulse 0.5s ease-in-out';
@@ -898,7 +870,6 @@ class DashboardApp {
     }
 }
 
-// Export functions for global access
 window.exportChart = function(chartId) {
     const chartKey = chartId.replace('Chart', '');
     const chart = app.charts[chartKey];
@@ -935,7 +906,6 @@ window.exportTable = function() {
     link.click();
 };
 
-// Initialize the dashboard when DOM is loaded
 let app;
 document.addEventListener('DOMContentLoaded', () => {
     app = new DashboardApp();
