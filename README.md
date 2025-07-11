@@ -21,8 +21,11 @@ A sleek, responsive, and feature-rich analytics dashboard designed to provide a 
 A live version of the dashboard can be run by simply opening the `index.html` file in your browser. For the best experience, use a live server extension in your code editor.
 
 <p align="center">
-  <img src="https://placehold.co/800x500/F5F5F5/333333?text=Dashboard+Screenshot+Here" alt="Dashboard Screenshot" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://github.com/user-attachments/assets/299d8baa-a07f-4e53-ac8f-2723e99127ec" alt="Dashboard Screenshot" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </p>
+
+
+
 
 ---
 
