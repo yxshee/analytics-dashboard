@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ChartCard from './ChartCard';
 import RevenueChart from './charts/RevenueChart';
 import EngagementChart from './charts/EngagementChart';
@@ -7,60 +7,187 @@ import DataTable from './DataTable';
 import './Dashboard.css';
 
 export default function Dashboard() {
+  const [metrics, setMetrics] = useState({
+    totalRevenue: 0,
+    activeUsers: 0,
+    conversionRate: 0,
+    avgOrderValue: 0
+  });
+
+  // Simulate real-time data updates
+  useEffect(() => {
+    const updateMetrics = () => {
+      setMetrics({
+        totalRevenue: 2847650 + Math.floor(Math.random() * 1000),
+        activeUsers: 34567 + Math.floor(Math.random() * 100),
+        conversionRate: 3.42 + (Math.random() * 0.1 - 0.05),
+        avgOrderValue: 127.84 + (Math.random() * 5 - 2.5)
+      });
+    };
+
+    updateMetrics();
+    const interval = setInterval(updateMetrics, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const formatCurrency = (value) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(value);
+  };
+
+  const formatNumber = (value) => {
+    return new Intl.NumberFormat('en-US').format(Math.floor(value));
+  };
+
+  const currentDate = new Date().toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+
   const sampleData = [
-    { id: '001', customer: 'Alice', amount: 120.0, date: '2025-08-01', status: 'Completed' },
-    { id: '002', customer: 'Bob', amount: 75.5, date: '2025-08-02', status: 'Pending' },
-    { id: '003', customer: 'Charlie', amount: 200.0, date: '2025-08-03', status: 'Completed' },
-    { id: '004', customer: 'Diana', amount: 50.0, date: '2025-08-04', status: 'Cancelled' },
-    { id: '005', customer: 'Evan', amount: 180.75, date: '2025-08-05', status: 'Completed' },
-    { id: '006', customer: 'Fiona', amount: 90.0, date: '2025-08-06', status: 'Pending' },
-    { id: '007', customer: 'George', amount: 240.0, date: '2025-08-07', status: 'Completed' },
-    { id: '008', customer: 'Hannah', amount: 130.5, date: '2025-08-08', status: 'Completed' },
-    { id: '009', customer: 'Ian', amount: 60.0, date: '2025-08-09', status: 'Pending' },
-    { id: '010', customer: 'Jane', amount: 300.0, date: '2025-08-10', status: 'Completed' }
+    { id: '001', customer: 'Alice Johnson', amount: 1247.50, date: '2025-08-01', status: 'Completed', product: 'Enterprise Plan' },
+    { id: '002', customer: 'Bob Chen', amount: 875.00, date: '2025-08-02', status: 'Pending', product: 'Professional Plan' },
+    { id: '003', customer: 'Charlie Davis', amount: 2199.00, date: '2025-08-03', status: 'Completed', product: 'Custom Solution' },
+    { id: '004', customer: 'Diana Rodriguez', amount: 450.00, date: '2025-08-04', status: 'Cancelled', product: 'Basic Plan' },
+    { id: '005', customer: 'Evan Thompson', amount: 1680.75, date: '2025-08-05', status: 'Completed', product: 'Premium Plan' },
+    { id: '006', customer: 'Fiona Walsh', amount: 920.00, date: '2025-08-06', status: 'Pending', product: 'Professional Plan' },
+    { id: '007', customer: 'George Kumar', amount: 3240.00, date: '2025-08-07', status: 'Completed', product: 'Enterprise Plus' },
+    { id: '008', customer: 'Hannah Lee', amount: 1130.50, date: '2025-08-08', status: 'Completed', product: 'Professional Plan' }
   ];
 
   return (
     <div className="dashboard">
       <div className="dashboard-header">
-        <h1>Welcome back!</h1>
-        <p>Here's what's happening with your business today.</p>
+        <div className="header-content">
+          <div>
+            <h1>Business Intelligence Dashboard</h1>
+            <p className="dashboard-subtitle">
+              Real-time insights for {currentDate} • Last updated: {new Date().toLocaleTimeString()}
+            </p>
+          </div>
+          <div className="dashboard-actions">
+            <button className="action-btn primary">
+              <span>📊</span> Generate Report
+            </button>
+            <button className="action-btn secondary">
+              <span>📈</span> Export Data
+            </button>
+          </div>
+        </div>
       </div>
 
-      <div className="stats-overview">
-        <div className="stat-card">
-          <div className="stat-value">$24,567</div>
-          <div className="stat-label">Total Revenue</div>
+      {/* Enhanced KPI Cards */}
+      <div className="kpi-grid">
+        <div className="stat-card primary">
+          <div className="stat-header">
+            <h3>Total Revenue</h3>
+            <span className="stat-icon">💰</span>
+          </div>
+          <div className="stat-value">{formatCurrency(metrics.totalRevenue)}</div>
+          <div className="stat-change positive">
+            <span className="trend-icon">↗</span>
+            +12.5% vs last month
+          </div>
+          <div className="stat-insight">
+            Best performing month in Q3
+          </div>
         </div>
-        <div className="stat-card accent">
-          <div className="stat-value">1,234</div>
-          <div className="stat-label">New Customers</div>
-        </div>
+
         <div className="stat-card success">
-          <div className="stat-value">98.5%</div>
-          <div className="stat-label">Uptime</div>
+          <div className="stat-header">
+            <h3>Active Users</h3>
+            <span className="stat-icon">👥</span>
+          </div>
+          <div className="stat-value">{formatNumber(metrics.activeUsers)}</div>
+          <div className="stat-change positive">
+            <span className="trend-icon">↗</span>
+            +8.2% vs last week
+          </div>
+          <div className="stat-insight">
+            Peak usage during lunch hours
+          </div>
         </div>
+
         <div className="stat-card warning">
-          <div className="stat-value">156</div>
-          <div className="stat-label">Pending Orders</div>
+          <div className="stat-header">
+            <h3>Conversion Rate</h3>
+            <span className="stat-icon">🎯</span>
+          </div>
+          <div className="stat-value">{metrics.conversionRate.toFixed(2)}%</div>
+          <div className="stat-change neutral">
+            <span className="trend-icon">→</span>
+            -0.1% vs last week
+          </div>
+          <div className="stat-insight">
+            Mobile conversion needs improvement
+          </div>
+        </div>
+
+        <div className="stat-card error">
+          <div className="stat-header">
+            <h3>Avg Order Value</h3>
+            <span className="stat-icon">🛒</span>
+          </div>
+          <div className="stat-value">{formatCurrency(metrics.avgOrderValue)}</div>
+          <div className="stat-change positive">
+            <span className="trend-icon">↗</span>
+            +5.7% vs last month
+          </div>
+          <div className="stat-insight">
+            Premium products driving growth
+          </div>
         </div>
       </div>
 
-      <div className="charts-grid">
-        <ChartCard title="Revenue Overview">
-          <RevenueChart />
-        </ChartCard>
-        <ChartCard title="User Engagement">
-          <EngagementChart />
-        </ChartCard>
-        <ChartCard title="Traffic Sources">
-          <TrafficChart />
-        </ChartCard>
+      {/* Enhanced Charts Section */}
+      <div className="charts-section">
+        <div className="section-header">
+          <h2>Performance Analytics</h2>
+          <p>Comprehensive view of your business metrics and trends</p>
+        </div>
+        
+        <div className="charts-grid">
+          <ChartCard 
+            title="Revenue Trends" 
+            subtitle="Monthly revenue performance with forecasting"
+            insight="Revenue is trending upward with a 15% growth rate"
+          >
+            <RevenueChart />
+          </ChartCard>
+          
+          <ChartCard 
+            title="User Engagement" 
+            subtitle="Daily active users and session duration"
+            insight="Engagement peaks during weekdays, lowest on weekends"
+          >
+            <EngagementChart />
+          </ChartCard>
+          
+          <ChartCard 
+            title="Traffic Analytics" 
+            subtitle="Website traffic sources and patterns"
+            insight="Organic search traffic increased by 23% this month"
+          >
+            <TrafficChart />
+          </ChartCard>
+        </div>
       </div>
-      
-      <div className="table-section">
-        <h2>Recent Transactions</h2>
-        <DataTable data={sampleData} />
+
+      {/* Enhanced Data Table */}
+      <div className="data-section">
+        <div className="section-header">
+          <h2>Recent Transactions</h2>
+          <p>Latest customer transactions and order details</p>
+        </div>
+        <div className="table-container">
+          <DataTable data={sampleData} />
+        </div>
       </div>
     </div>
   );
