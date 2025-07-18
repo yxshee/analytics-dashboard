@@ -38,22 +38,22 @@
 }
 
 .dark-theme {
-  /* Dark theme colors */
-  --color-bg: #0f172a;
-  --color-surface: #1e293b;
-  --color-surface-elevated: #334155;
-  --color-text: #f1f5f9;
-  --color-text-secondary: #cbd5e1;
+  /* Darker theme colors */
+  --color-bg: #0a0e17;
+  --color-surface: #0f1419;
+  --color-surface-elevated: #1a202c;
+  --color-text: #ffffff;
+  --color-text-secondary: #e2e8f0;
   --color-primary: #60a5fa;
   --color-primary-hover: #3b82f6;
   --color-accent: #f87171;
   --color-accent-hover: #ef4444;
   --color-success: #34d399;
   --color-warning: #fbbf24;
-  --color-border: #475569;
-  --color-muted: #64748b;
-  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+  --color-border: #2d3748;
+  --color-muted: #718096;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.5), 0 1px 2px -1px rgb(0 0 0 / 0.5);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5);
 }
 
 /* Global Reset */
