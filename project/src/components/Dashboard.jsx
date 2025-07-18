@@ -1,4 +1,5 @@
 import React from 'react';
+import ChartCard from './ChartCard';
 import RevenueChart from './charts/RevenueChart';
 import EngagementChart from './charts/EngagementChart';
 import TrafficChart from './charts/TrafficChart';
