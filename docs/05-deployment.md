@@ -9,11 +9,28 @@ npm run build
 
 Artifacts are output to `code/dist`.
 
-## Vercel
-- Project root: `code`
-- Build command: `npm run build`
-- Output directory: `dist`
-- SPA routing: default is fine; ensure a fallback to `/index.html` for client-side navigation.
+## Vercel (Recommended)
+
+The project includes a `vercel.json` configuration file for easy deployment:
+
+```json
+{
+  "buildCommand": "cd code && npm run build",
+  "outputDirectory": "./code/dist",
+  "installCommand": "cd code && npm install"
+}
+```
+
+### Deploy Steps:
+1. Connect your GitHub repository to Vercel
+2. Vercel auto-detects the configuration
+3. Deploy automatically on every push to main
+
+### Manual Deploy:
+```sh
+npm i -g vercel
+vercel --prod
+```
 
 ## Netlify
 - Base directory: `code`
