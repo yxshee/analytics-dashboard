@@ -100,13 +100,16 @@ npm run preview
 
 ## 🌐 Deployment
 
-Typical settings (Vercel/Netlify):
+Ready for Vercel deployment with included `vercel.json` configuration:
 
-* Project root: `code`
-* Build command: `npm run build`
-* Output directory: `dist`
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yxshee/admybrand-dashboard)
 
-For single-page app routing, ensure unknown routes fall back to `/index.html` (Vercel auto-detects; on Netlify use a `_redirects` rule).
+### Manual Steps:
+1. Connect GitHub repo to Vercel
+2. Vercel auto-detects settings from `vercel.json`
+3. Deploy automatically on push to main
+
+See `DEPLOYMENT.md` for detailed instructions.
 
 ---
 
