@@ -3,18 +3,30 @@
 ```
 admybrand-dashboard/
 ├── code/
-│   ├── index.html      # Main layout & components
-│   ├── style.css       # CSS variables, utilities, responsiveness
-│   └── app.js          # DashboardApp class, data flow, real-time updates
-├── docs/               # This multi-page documentation
-├── assets/             # Icons, images
-├── admybrand_dashboard_data.json  # Mock data source
-├── README.md           # Entrypoint with links to docs
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js
+│   └── src/
+│       ├── main.jsx                 # React root mount
+│       ├── App.jsx                  # Layout + tab switching
+│       ├── contexts/ThemeContext.jsx# Light/Dark theme toggling
+│       ├── components/
+│       │   ├── Sidebar.jsx, Header.jsx
+│       │   ├── Dashboard.jsx, Analytics.jsx, Reports.jsx, Settings.jsx
+│       │   ├── DataTable.jsx, ChartCard.jsx
+│       │   └── charts/
+│       │       ├── RevenueChart.jsx, EngagementChart.jsx, TrafficChart.jsx
+│       │       └── TrafficSourcesPieChart.jsx
+│       └── styles (co-located .css files)
+├── docs/
+├── assets/
+├── README.md
 └── LICENSE
 ```
 
-## Core Components
+## Core Modules
 
-- **DashboardApp (app.js):** Initialization, data loading, charts, table pagination, real-time updates.
-- **CSS Design System (style.css):** Color themes, spacing, typography, utility classes.
-- **HTML Layout (index.html):** Semantic sections for header, metrics, charts, table, and insights.
+- `App.jsx`: Orchestrates sidebar, header, and main content, switching between sections.
+- `ThemeContext.jsx`: Provides a `dark` boolean and `toggleTheme()`; toggles `body.dark-theme`.
+- Charts (`react-chartjs-2`): Line/Bar/Pie components themed via CSS variables.
+- `DataTable.jsx`: Client-side search, sort, pagination, and CSV export via `react-csv`.

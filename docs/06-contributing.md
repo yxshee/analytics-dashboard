@@ -11,4 +11,8 @@
    ```
 4. Push & open a pull request  
 5. Discuss, iterate, and merge  
-6. Follow the existing code style and file structure.
+6. Work inside `code/` and run:
+   ```sh
+   npm run lint && npm run build
+   ```
+   before opening a PR.

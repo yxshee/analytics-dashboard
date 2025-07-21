@@ -1,19 +1,21 @@
 # Usage
 
-## Theme Toggle  
-Click the moon/sun icon to switch light/dark mode; preference is stored in `localStorage`.
+## Theme Toggle
+Use the header toggle to switch light/dark mode. The app applies a `dark-theme` class on `<body>` via `ThemeContext` and CSS variables adapt chart and UI colors.
 
-## Overview Metrics  
-- Animated counters for revenue, users, conversions, growth.
-- Live updates every 30 seconds with simulated random variation.
+## KPI Cards
+The dashboard header shows KPIs (revenue, active users, conversion rate, AOV) that simulate updates every few seconds.
 
-## Charts  
-- **Revenue Trends** (line chart)  
-- **User Engagement** (bar chart)  
-- **Traffic Sources** (doughnut chart)  
-Click “Export” to download each chart as a PNG.
+## Charts
+- Revenue Trends (Line)
+- User Engagement (Line)
+- Traffic Analytics (Bar)
+- Traffic Sources (Pie) on the Analytics page
 
-## Campaign Table  
-- **Search & Filter:** Debounced search and type-based filter  
-- **Sort & Paginate:** Click column headers, navigate pages  
-- **Export CSV:** Download current table view
+Charts use `react-chartjs-2` and inherit theme colors from CSS variables.
+
+## Data Table
+- Search across all visible columns
+- Sort by clicking column headers
+- Pagination controls (Prev/Next)
+- Export current dataset as CSV
