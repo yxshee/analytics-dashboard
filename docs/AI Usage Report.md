@@ -1,8 +1,10 @@
 # 🤖 AI Usage Report
 
-<p align="center">
-  <img src="assets/logo.png" alt="ADmyBRAND Logo" width="120" />
-</p>
+
+
+
+
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/d4c6ccd6-1966-4d26-a0b2-7d921e23eb82" />
 
 # 📝 Report Overview
 This report details how AI tools were leveraged throughout the development of the React-based ADmyBRAND Insights Dashboard (React + Vite). It covers tools and models used, prompt strategies, concrete contributions to code files, optimization techniques, and lessons learned.
