@@ -66,7 +66,7 @@ code/
 
 ---
 
-## 🧑‍� Getting Started
+## 🧑‍💻 Getting Started
 
 Requires Node.js 18+.
 
@@ -109,7 +109,7 @@ Ready for Vercel deployment with included `vercel.json` configuration:
 2. Vercel auto-detects settings from `vercel.json`
 3. Deploy automatically on push to main
 
-See `DEPLOYMENT.md` for detailed instructions.
+See `docs/05-deployment.md` for detailed instructions.
 
 ---
 
