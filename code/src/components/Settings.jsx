@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { ThemeContext } from '../contexts/ThemeContext';
 import './Settings.css';
 
 export default function Settings() {
+  const { dark, setTheme } = useContext(ThemeContext);
   const [settings, setSettings] = useState({
     notifications: true,
     emailReports: false,
@@ -10,9 +12,56 @@ export default function Settings() {
     timezone: 'UTC-8',
     language: 'en'
   });
+  const [toast, setToast] = useState('');
+
+  // Load from localStorage on mount
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem('app_settings');
+      if (raw) {
+        const parsed = JSON.parse(raw);
+  setSettings(prev => ({ ...prev, ...parsed }));
+  if (typeof parsed.darkMode === 'boolean') setTheme(parsed.darkMode);
+      }
+    } catch (e) {
+      console.warn('Failed to load settings', e);
+    }
+  }, [setTheme]);
 
   const handleSettingChange = (key, value) => {
     setSettings(prev => ({ ...prev, [key]: value }));
+  };
+
+  const showToast = (msg) => {
+    setToast(msg);
+    setTimeout(() => setToast(''), 2000);
+  };
+
+  const saveSettings = () => {
+    try {
+      localStorage.setItem('app_settings', JSON.stringify(settings));
+  // reflect dark mode immediately via theme context
+  setTheme(settings.darkMode);
+      showToast('Settings saved');
+    } catch (e) {
+      console.error('Failed to save settings', e);
+      showToast('Failed to save');
+    }
+  };
+
+  const resetDefaults = () => {
+    const defaults = {
+      notifications: true,
+      emailReports: false,
+      darkMode: false,
+      dataRetention: '6months',
+      timezone: 'UTC-8',
+      language: 'en'
+    };
+    setSettings(defaults);
+    localStorage.setItem('app_settings', JSON.stringify(defaults));
+  setTheme(false);
+    showToast('Settings reset');
   };
 
   return (
@@ -66,7 +115,7 @@ export default function Settings() {
             <label className="toggle">
               <input 
                 type="checkbox" 
-                checked={settings.darkMode}
+                checked={settings.darkMode ?? dark}
                 onChange={(e) => handleSettingChange('darkMode', e.target.checked)}
               />
               <span className="slider"></span>
@@ -129,10 +178,11 @@ export default function Settings() {
         </div>
 
         <div className="settings-actions">
-          <button className="btn-primary">Save Changes</button>
-          <button className="btn-secondary">Reset to Defaults</button>
+          <button className="btn-primary" onClick={saveSettings}>Save Changes</button>
+          <button className="btn-secondary" onClick={resetDefaults}>Reset to Defaults</button>
         </div>
       </div>
+      {toast && <div className="toast" role="status" aria-live="polite">{toast}</div>}
     </div>
   );
 }

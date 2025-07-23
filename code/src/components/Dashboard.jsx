@@ -4,7 +4,7 @@ import RevenueChart from './charts/RevenueChart';
 import EngagementChart from './charts/EngagementChart';
 import TrafficChart from './charts/TrafficChart';
 import DataTable from './DataTable';
-import { exportToPDF } from '../utils/exportUtils';
+import { exportToPDF, exportJSONToCSV } from '../utils/exportUtils';
 import './Dashboard.css';
 
 export default function Dashboard() {
@@ -62,6 +62,10 @@ export default function Dashboard() {
     { id: '008', customer: 'Hannah Lee', amount: 1130.50, date: '2025-08-08', status: 'Completed', product: 'Professional Plan' }
   ];
 
+  const exportTableCSV = () => {
+    exportJSONToCSV(sampleData, 'transactions.csv');
+  };
+
   return (
     <div className="dashboard" id="dashboard-content">
       <div className="dashboard-header">
@@ -79,7 +83,7 @@ export default function Dashboard() {
             >
               <span>📊</span> Export PDF
             </button>
-            <button className="action-btn secondary">
+            <button className="action-btn secondary" onClick={exportTableCSV}>
               <span>📈</span> Export Data
             </button>
           </div>
