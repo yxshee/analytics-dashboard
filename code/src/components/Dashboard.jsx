@@ -4,6 +4,7 @@ import RevenueChart from './charts/RevenueChart';
 import EngagementChart from './charts/EngagementChart';
 import TrafficChart from './charts/TrafficChart';
 import DataTable from './DataTable';
+import { exportToPDF } from '../utils/exportUtils';
 import './Dashboard.css';
 
 export default function Dashboard() {
@@ -62,7 +63,7 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="dashboard">
+    <div className="dashboard" id="dashboard-content">
       <div className="dashboard-header">
         <div className="header-content">
           <div>
@@ -72,8 +73,11 @@ export default function Dashboard() {
             </p>
           </div>
           <div className="dashboard-actions">
-            <button className="action-btn primary">
-              <span>📊</span> Generate Report
+            <button 
+              className="action-btn primary"
+              onClick={() => exportToPDF('dashboard-content', 'admybrand-dashboard')}
+            >
+              <span>📊</span> Export PDF
             </button>
             <button className="action-btn secondary">
               <span>📈</span> Export Data
