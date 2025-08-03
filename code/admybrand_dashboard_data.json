@@ -1,0 +1,816 @@
+{
+  "overview_metrics": {
+    "revenue": {
+      "current": 124750,
+      "previous": 98200,
+      "growth": 27.0,
+      "currency": "USD"
+    },
+    "users": {
+      "current": 8934,
+      "previous": 7821,
+      "growth": 14.2
+    },
+    "conversions": {
+      "current": 342,
+      "previous": 289,
+      "growth": 18.3
+    },
+    "growth_rate": {
+      "current": 23.5,
+      "previous": 18.7,
+      "growth": 4.8
+    }
+  },
+  "revenue_chart": [
+    {
+      "month": "Aug 2024",
+      "revenue": 81829,
+      "target": 77737,
+      "previous_year": 69554
+    },
+    {
+      "month": "Sep 2024",
+      "revenue": 85898,
+      "target": 81603,
+      "previous_year": 73013
+    },
+    {
+      "month": "Oct 2024",
+      "revenue": 102481,
+      "target": 97356,
+      "previous_year": 87108
+    },
+    {
+      "month": "Nov 2024",
+      "revenue": 114701,
+      "target": 108965,
+      "previous_year": 97495
+    },
+    {
+      "month": "Dec 2024",
+      "revenue": 102813,
+      "target": 97672,
+      "previous_year": 87391
+    },
+    {
+      "month": "Dec 2024",
+      "revenue": 105601,
+      "target": 100320,
+      "previous_year": 89760
+    },
+    {
+      "month": "Jan 2025",
+      "revenue": 110964,
+      "target": 105415,
+      "previous_year": 94319
+    },
+    {
+      "month": "Mar 2025",
+      "revenue": 104712,
+      "target": 99476,
+      "previous_year": 89005
+    },
+    {
+      "month": "Mar 2025",
+      "revenue": 85144,
+      "target": 80886,
+      "previous_year": 72372
+    },
+    {
+      "month": "Apr 2025",
+      "revenue": 95710,
+      "target": 90924,
+      "previous_year": 81353
+    },
+    {
+      "month": "May 2025",
+      "revenue": 100054,
+      "target": 95051,
+      "previous_year": 85045
+    },
+    {
+      "month": "Jun 2025",
+      "revenue": 121918,
+      "target": 115822,
+      "previous_year": 103630
+    }
+  ],
+  "user_engagement_chart": [
+    {
+      "date": "2025-07-04",
+      "day": "Fri",
+      "sessions": 833,
+      "page_views": 2231,
+      "bounce_rate": 60.9,
+      "avg_session_duration": 174.0
+    },
+    {
+      "date": "2025-07-05",
+      "day": "Sat",
+      "sessions": 704,
+      "page_views": 1765,
+      "bounce_rate": 53.2,
+      "avg_session_duration": 256.0
+    },
+    {
+      "date": "2025-07-06",
+      "day": "Sun",
+      "sessions": 713,
+      "page_views": 2853,
+      "bounce_rate": 60.6,
+      "avg_session_duration": 235.0
+    },
+    {
+      "date": "2025-07-07",
+      "day": "Mon",
+      "sessions": 857,
+      "page_views": 2741,
+      "bounce_rate": 51.1,
+      "avg_session_duration": 211.0
+    },
+    {
+      "date": "2025-07-08",
+      "day": "Tue",
+      "sessions": 1053,
+      "page_views": 3205,
+      "bounce_rate": 54.0,
+      "avg_session_duration": 266.0
+    },
+    {
+      "date": "2025-07-09",
+      "day": "Wed",
+      "sessions": 1078,
+      "page_views": 3072,
+      "bounce_rate": 47.9,
+      "avg_session_duration": 163.0
+    },
+    {
+      "date": "2025-07-10",
+      "day": "Thu",
+      "sessions": 850,
+      "page_views": 2329,
+      "bounce_rate": 46.3,
+      "avg_session_duration": 265.0
+    },
+    {
+      "date": "2025-07-11",
+      "day": "Fri",
+      "sessions": 1022,
+      "page_views": 3941,
+      "bounce_rate": 44.7,
+      "avg_session_duration": 126.0
+    },
+    {
+      "date": "2025-07-12",
+      "day": "Sat",
+      "sessions": 782,
+      "page_views": 2350,
+      "bounce_rate": 39.1,
+      "avg_session_duration": 287.0
+    },
+    {
+      "date": "2025-07-13",
+      "day": "Sun",
+      "sessions": 565,
+      "page_views": 1531,
+      "bounce_rate": 58.7,
+      "avg_session_duration": 187.0
+    },
+    {
+      "date": "2025-07-14",
+      "day": "Mon",
+      "sessions": 970,
+      "page_views": 3950,
+      "bounce_rate": 51.6,
+      "avg_session_duration": 292.0
+    },
+    {
+      "date": "2025-07-15",
+      "day": "Tue",
+      "sessions": 1195,
+      "page_views": 4258,
+      "bounce_rate": 55.2,
+      "avg_session_duration": 163.0
+    },
+    {
+      "date": "2025-07-16",
+      "day": "Wed",
+      "sessions": 936,
+      "page_views": 3143,
+      "bounce_rate": 44.0,
+      "avg_session_duration": 198.0
+    },
+    {
+      "date": "2025-07-17",
+      "day": "Thu",
+      "sessions": 1107,
+      "page_views": 3225,
+      "bounce_rate": 50.2,
+      "avg_session_duration": 158.0
+    },
+    {
+      "date": "2025-07-18",
+      "day": "Fri",
+      "sessions": 939,
+      "page_views": 2405,
+      "bounce_rate": 45.3,
+      "avg_session_duration": 172.0
+    },
+    {
+      "date": "2025-07-19",
+      "day": "Sat",
+      "sessions": 726,
+      "page_views": 2911,
+      "bounce_rate": 49.9,
+      "avg_session_duration": 261.0
+    },
+    {
+      "date": "2025-07-20",
+      "day": "Sun",
+      "sessions": 637,
+      "page_views": 1776,
+      "bounce_rate": 37.4,
+      "avg_session_duration": 191.0
+    },
+    {
+      "date": "2025-07-21",
+      "day": "Mon",
+      "sessions": 1113,
+      "page_views": 3296,
+      "bounce_rate": 48.4,
+      "avg_session_duration": 153.0
+    },
+    {
+      "date": "2025-07-22",
+      "day": "Tue",
+      "sessions": 882,
+      "page_views": 3569,
+      "bounce_rate": 49.6,
+      "avg_session_duration": 217.0
+    },
+    {
+      "date": "2025-07-23",
+      "day": "Wed",
+      "sessions": 966,
+      "page_views": 2804,
+      "bounce_rate": 45.2,
+      "avg_session_duration": 131.0
+    },
+    {
+      "date": "2025-07-24",
+      "day": "Thu",
+      "sessions": 877,
+      "page_views": 2245,
+      "bounce_rate": 39.2,
+      "avg_session_duration": 198.0
+    },
+    {
+      "date": "2025-07-25",
+      "day": "Fri",
+      "sessions": 924,
+      "page_views": 2783,
+      "bounce_rate": 35.5,
+      "avg_session_duration": 225.0
+    },
+    {
+      "date": "2025-07-26",
+      "day": "Sat",
+      "sessions": 655,
+      "page_views": 2321,
+      "bounce_rate": 53.8,
+      "avg_session_duration": 226.0
+    },
+    {
+      "date": "2025-07-27",
+      "day": "Sun",
+      "sessions": 620,
+      "page_views": 2366,
+      "bounce_rate": 54.5,
+      "avg_session_duration": 132.0
+    },
+    {
+      "date": "2025-07-28",
+      "day": "Mon",
+      "sessions": 853,
+      "page_views": 3405,
+      "bounce_rate": 64.0,
+      "avg_session_duration": 292.0
+    },
+    {
+      "date": "2025-07-29",
+      "day": "Tue",
+      "sessions": 1129,
+      "page_views": 4504,
+      "bounce_rate": 37.9,
+      "avg_session_duration": 290.0
+    },
+    {
+      "date": "2025-07-30",
+      "day": "Wed",
+      "sessions": 1060,
+      "page_views": 3358,
+      "bounce_rate": 51.8,
+      "avg_session_duration": 151.0
+    },
+    {
+      "date": "2025-07-31",
+      "day": "Thu",
+      "sessions": 958,
+      "page_views": 3163,
+      "bounce_rate": 58.8,
+      "avg_session_duration": 265.0
+    },
+    {
+      "date": "2025-08-01",
+      "day": "Fri",
+      "sessions": 1113,
+      "page_views": 3922,
+      "bounce_rate": 50.7,
+      "avg_session_duration": 130.0
+    },
+    {
+      "date": "2025-08-02",
+      "day": "Sat",
+      "sessions": 790,
+      "page_views": 2150,
+      "bounce_rate": 48.5,
+      "avg_session_duration": 299.0
+    }
+  ],
+  "conversion_funnel": [
+    {
+      "stage": "Visitors",
+      "value": 25000,
+      "percentage": 100
+    },
+    {
+      "stage": "Leads",
+      "value": 5000,
+      "percentage": 20
+    },
+    {
+      "stage": "Qualified Leads",
+      "value": 1500,
+      "percentage": 30
+    },
+    {
+      "stage": "Opportunities",
+      "value": 750,
+      "percentage": 50
+    },
+    {
+      "stage": "Customers",
+      "value": 342,
+      "percentage": 45.6
+    }
+  ],
+  "traffic_sources": [
+    {
+      "source": "Organic Search",
+      "value": 45.2,
+      "visitors": 11300
+    },
+    {
+      "source": "Social Media",
+      "value": 23.8,
+      "visitors": 5950
+    },
+    {
+      "source": "Direct",
+      "value": 15.6,
+      "visitors": 3900
+    },
+    {
+      "source": "Email Marketing",
+      "value": 8.4,
+      "visitors": 2100
+    },
+    {
+      "source": "Paid Ads",
+      "value": 7.0,
+      "visitors": 1750
+    }
+  ],
+  "campaign_performance": [
+    {
+      "date": "2025-08-03",
+      "campaign": "Google Ads",
+      "impressions": 6167,
+      "clicks": 389,
+      "conversions": 25,
+      "cost": 1312,
+      "revenue": 2787
+    },
+    {
+      "date": "2025-08-03",
+      "campaign": "Facebook Ads",
+      "impressions": 13576,
+      "clicks": 232,
+      "conversions": 14,
+      "cost": 1327,
+      "revenue": 3807
+    },
+    {
+      "date": "2025-08-03",
+      "campaign": "Email Marketing",
+      "impressions": 5376,
+      "clicks": 374,
+      "conversions": 14,
+      "cost": 1396,
+      "revenue": 1803
+    },
+    {
+      "date": "2025-08-03",
+      "campaign": "LinkedIn Ads",
+      "impressions": 9739,
+      "clicks": 156,
+      "conversions": 15,
+      "cost": 1220,
+      "revenue": 2710
+    },
+    {
+      "date": "2025-08-03",
+      "campaign": "YouTube Ads",
+      "impressions": 13802,
+      "clicks": 226,
+      "conversions": 16,
+      "cost": 522,
+      "revenue": 1558
+    },
+    {
+      "date": "2025-08-02",
+      "campaign": "Google Ads",
+      "impressions": 8640,
+      "clicks": 369,
+      "conversions": 24,
+      "cost": 800,
+      "revenue": 4380
+    },
+    {
+      "date": "2025-08-02",
+      "campaign": "Facebook Ads",
+      "impressions": 9557,
+      "clicks": 492,
+      "conversions": 25,
+      "cost": 1344,
+      "revenue": 3131
+    },
+    {
+      "date": "2025-08-02",
+      "campaign": "Email Marketing",
+      "impressions": 12254,
+      "clicks": 108,
+      "conversions": 7,
+      "cost": 1118,
+      "revenue": 5297
+    },
+    {
+      "date": "2025-08-02",
+      "campaign": "LinkedIn Ads",
+      "impressions": 8162,
+      "clicks": 481,
+      "conversions": 18,
+      "cost": 1964,
+      "revenue": 3274
+    },
+    {
+      "date": "2025-08-02",
+      "campaign": "YouTube Ads",
+      "impressions": 6350,
+      "clicks": 115,
+      "conversions": 6,
+      "cost": 1718,
+      "revenue": 2956
+    },
+    {
+      "date": "2025-08-01",
+      "campaign": "Google Ads",
+      "impressions": 11270,
+      "clicks": 443,
+      "conversions": 6,
+      "cost": 1912,
+      "revenue": 5367
+    },
+    {
+      "date": "2025-08-01",
+      "campaign": "Facebook Ads",
+      "impressions": 5323,
+      "clicks": 217,
+      "conversions": 11,
+      "cost": 1593,
+      "revenue": 4510
+    },
+    {
+      "date": "2025-08-01",
+      "campaign": "Email Marketing",
+      "impressions": 14295,
+      "clicks": 109,
+      "conversions": 17,
+      "cost": 1148,
+      "revenue": 5759
+    },
+    {
+      "date": "2025-08-01",
+      "campaign": "LinkedIn Ads",
+      "impressions": 10254,
+      "clicks": 126,
+      "conversions": 20,
+      "cost": 887,
+      "revenue": 1935
+    },
+    {
+      "date": "2025-08-01",
+      "campaign": "YouTube Ads",
+      "impressions": 10202,
+      "clicks": 218,
+      "conversions": 13,
+      "cost": 1606,
+      "revenue": 1723
+    },
+    {
+      "date": "2025-07-31",
+      "campaign": "Google Ads",
+      "impressions": 11883,
+      "clicks": 246,
+      "conversions": 8,
+      "cost": 938,
+      "revenue": 3442
+    },
+    {
+      "date": "2025-07-31",
+      "campaign": "Facebook Ads",
+      "impressions": 9525,
+      "clicks": 488,
+      "conversions": 13,
+      "cost": 1405,
+      "revenue": 2090
+    },
+    {
+      "date": "2025-07-31",
+      "campaign": "Email Marketing",
+      "impressions": 8330,
+      "clicks": 441,
+      "conversions": 15,
+      "cost": 641,
+      "revenue": 4970
+    },
+    {
+      "date": "2025-07-31",
+      "campaign": "LinkedIn Ads",
+      "impressions": 7435,
+      "clicks": 424,
+      "conversions": 15,
+      "cost": 1887,
+      "revenue": 4428
+    },
+    {
+      "date": "2025-07-31",
+      "campaign": "YouTube Ads",
+      "impressions": 7570,
+      "clicks": 376,
+      "conversions": 20,
+      "cost": 1331,
+      "revenue": 3598
+    },
+    {
+      "date": "2025-07-30",
+      "campaign": "Google Ads",
+      "impressions": 11594,
+      "clicks": 475,
+      "conversions": 8,
+      "cost": 1537,
+      "revenue": 4437
+    },
+    {
+      "date": "2025-07-30",
+      "campaign": "Facebook Ads",
+      "impressions": 11838,
+      "clicks": 362,
+      "conversions": 21,
+      "cost": 1470,
+      "revenue": 4035
+    },
+    {
+      "date": "2025-07-30",
+      "campaign": "Email Marketing",
+      "impressions": 6317,
+      "clicks": 354,
+      "conversions": 17,
+      "cost": 1573,
+      "revenue": 5007
+    },
+    {
+      "date": "2025-07-30",
+      "campaign": "LinkedIn Ads",
+      "impressions": 13805,
+      "clicks": 431,
+      "conversions": 18,
+      "cost": 1549,
+      "revenue": 3075
+    },
+    {
+      "date": "2025-07-30",
+      "campaign": "YouTube Ads",
+      "impressions": 5128,
+      "clicks": 415,
+      "conversions": 23,
+      "cost": 1621,
+      "revenue": 2207
+    },
+    {
+      "date": "2025-07-29",
+      "campaign": "Google Ads",
+      "impressions": 8111,
+      "clicks": 356,
+      "conversions": 21,
+      "cost": 1989,
+      "revenue": 5839
+    },
+    {
+      "date": "2025-07-29",
+      "campaign": "Facebook Ads",
+      "impressions": 9006,
+      "clicks": 179,
+      "conversions": 21,
+      "cost": 1496,
+      "revenue": 3453
+    },
+    {
+      "date": "2025-07-29",
+      "campaign": "Email Marketing",
+      "impressions": 13069,
+      "clicks": 183,
+      "conversions": 16,
+      "cost": 1690,
+      "revenue": 5622
+    },
+    {
+      "date": "2025-07-29",
+      "campaign": "LinkedIn Ads",
+      "impressions": 11937,
+      "clicks": 172,
+      "conversions": 19,
+      "cost": 604,
+      "revenue": 5824
+    },
+    {
+      "date": "2025-07-29",
+      "campaign": "YouTube Ads",
+      "impressions": 11552,
+      "clicks": 309,
+      "conversions": 11,
+      "cost": 676,
+      "revenue": 4336
+    },
+    {
+      "date": "2025-07-28",
+      "campaign": "Google Ads",
+      "impressions": 10176,
+      "clicks": 288,
+      "conversions": 15,
+      "cost": 1898,
+      "revenue": 1804
+    },
+    {
+      "date": "2025-07-28",
+      "campaign": "Facebook Ads",
+      "impressions": 14660,
+      "clicks": 330,
+      "conversions": 9,
+      "cost": 1083,
+      "revenue": 5281
+    },
+    {
+      "date": "2025-07-28",
+      "campaign": "Email Marketing",
+      "impressions": 14688,
+      "clicks": 283,
+      "conversions": 6,
+      "cost": 722,
+      "revenue": 2355
+    },
+    {
+      "date": "2025-07-28",
+      "campaign": "LinkedIn Ads",
+      "impressions": 7575,
+      "clicks": 375,
+      "conversions": 19,
+      "cost": 1145,
+      "revenue": 5343
+    },
+    {
+      "date": "2025-07-28",
+      "campaign": "YouTube Ads",
+      "impressions": 11683,
+      "clicks": 243,
+      "conversions": 18,
+      "cost": 1667,
+      "revenue": 3437
+    }
+  ],
+  "recent_activities": [
+    {
+      "id": 1,
+      "action": "New campaign launched",
+      "campaign": "Summer Sale 2024",
+      "time": "2 hours ago",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "action": "Goal completed",
+      "campaign": "Lead Generation Q4",
+      "time": "4 hours ago",
+      "status": "completed"
+    },
+    {
+      "id": 3,
+      "action": "Budget threshold reached",
+      "campaign": "Facebook Ads - Retargeting",
+      "time": "6 hours ago",
+      "status": "warning"
+    },
+    {
+      "id": 4,
+      "action": "New conversion",
+      "campaign": "Google Ads - Brand Keywords",
+      "time": "1 day ago",
+      "status": "success"
+    },
+    {
+      "id": 5,
+      "action": "Campaign paused",
+      "campaign": "LinkedIn Sponsored Content",
+      "time": "2 days ago",
+      "status": "paused"
+    }
+  ],
+  "top_campaigns": [
+    {
+      "id": 1,
+      "name": "Google Ads - Brand Keywords",
+      "type": "Paid Search",
+      "budget": 15000,
+      "spent": 12500,
+      "impressions": 125000,
+      "clicks": 3200,
+      "conversions": 89,
+      "ctr": 2.56,
+      "cpa": 140.45,
+      "roas": 4.2
+    },
+    {
+      "id": 2,
+      "name": "Facebook Ads - Lookalike",
+      "type": "Social Media",
+      "budget": 8000,
+      "spent": 7200,
+      "impressions": 89000,
+      "clicks": 1890,
+      "conversions": 67,
+      "ctr": 2.12,
+      "cpa": 107.46,
+      "roas": 3.8
+    },
+    {
+      "id": 3,
+      "name": "Email - Newsletter Campaign",
+      "type": "Email Marketing",
+      "budget": 2000,
+      "spent": 1500,
+      "impressions": 45000,
+      "clicks": 2100,
+      "conversions": 78,
+      "ctr": 4.67,
+      "cpa": 19.23,
+      "roas": 6.2
+    },
+    {
+      "id": 4,
+      "name": "LinkedIn - B2B Targeting",
+      "type": "Social Media",
+      "budget": 5000,
+      "spent": 4200,
+      "impressions": 32000,
+      "clicks": 890,
+      "conversions": 34,
+      "ctr": 2.78,
+      "cpa": 123.53,
+      "roas": 2.9
+    },
+    {
+      "id": 5,
+      "name": "YouTube Advertising",
+      "type": "Video Marketing",
+      "budget": 6000,
+      "spent": 5100,
+      "impressions": 78000,
+      "clicks": 1200,
+      "conversions": 42,
+      "ctr": 1.54,
+      "cpa": 121.43,
+      "roas": 3.1
+    }
+  ]
+}
