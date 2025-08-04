@@ -1,15 +1,22 @@
-# ADmyBRAND Insights - Analytics Dashboard
-
+# 📊 ADmyBRAND Insights - Analytics Dashboard
 <p align="center">
-  <img src="https://placehold.co/1200x300/1F2121/32B8C6?text=ADmyBRAND+Insights&font=raleway" alt="ADmyBRAND Insights Banner">
+  <img src="assets/logo.png" alt="ADmyBRAND Logo" width="120" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge"/>
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Badge"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Badge"/>
-  <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="Chart.js Badge"/>
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Badge" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Badge" />
+  <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="Chart.js Badge" />
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT" />
+</p>
+
+<p align="center">
+  <a href="https://yxshdogra-analyticsdashboard.vercel.app/"><strong>🔗 Live Demo</strong></a>
+  &nbsp;|&nbsp;
+  <a href="https://vercel.com/new/clone?repository-url=https://github.com/yxshee/admybrand-dashboard&project-name=admybrand-dashboard&framework=other&root-directory=code">
+    <img src="https://vercel.com/button" alt="Deploy with Vercel" />
+  </a>
 </p>
 
 A sleek, responsive, and feature-rich analytics dashboard designed to provide a comprehensive overview of marketing performance. This project showcases a modern frontend stack to create a dynamic and user-friendly interface for data visualization.
