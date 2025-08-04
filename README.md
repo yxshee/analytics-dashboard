@@ -48,12 +48,6 @@ A live version of the dashboard can be run by simply opening the `index.html` fi
 
 ---
 
-## 📂 Project Structure
-
-The project is organized into the following files:
-
-.├── 📄 index.html              # The main HTML structure of the dashboard├── 🎨 style.css               # All styles, theming, and responsive design├── ⚙️ app.js                  # Core application logic, class-based structure└── 📊 admybrand_dashboard_data.json # Static JSON data for the dashboard
----
 
 ## 🚀 Getting Started
 
