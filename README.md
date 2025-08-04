@@ -18,6 +18,8 @@ A sleek, responsive, and feature-rich analytics dashboard designed to provide a 
 
 ## 🚀 Preview
 
+**Live Demo:** https://yxshdogra-analyticsdashboard.vercel.app/
+
 A live version of the dashboard can be run by simply opening the `index.html` file in your browser. For the best experience, use a live server extension in your code editor.
 
 <p align="center">
@@ -64,15 +66,25 @@ You only need a modern web browser like Google Chrome, Firefox, or Microsoft Edg
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/your-username/admybrand-insights.git](https://github.com/your-username/admybrand-insights.git)
+    git clone https://github.com/yxshee/admybrand-dashboard.git
     ```
 2.  **Navigate to the project directory:**
     ```sh
-    cd admybrand-insights
+    cd admybrand-dashboard
     ```
 3.  **Open the application:**
-    Simply open the `index.html` file in your web browser.
+    Navigate to the `code` folder and open the `index.html` file in your web browser.
     * For a better development experience with hot-reloading, you can use the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension for VS Code.
+
+### 🌐 Deploy to Production
+
+This project is ready for deployment to popular hosting platforms:
+
+#### Quick Deploy Options:
+
+**Vercel (Recommended):**
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yxshee/admybrand-dashboard&project-name=admybrand-dashboard&framework=other&root-directory=code)
+
 
 ---
 
