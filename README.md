@@ -16,7 +16,7 @@ A sleek, responsive, and feature-rich analytics dashboard designed to provide a 
 
 ---
 
-## 🚀 Live Demo & Preview
+## 🚀 Preview
 
 A live version of the dashboard can be run by simply opening the `index.html` file in your browser. For the best experience, use a live server extension in your code editor.
 
