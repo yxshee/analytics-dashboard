@@ -11,13 +11,7 @@
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT" />
 </p>
 
-<p align="center">
-  <a href="https://yxshdogra-analyticsdashboard.vercel.app/"><strong>🔗 Live Demo</strong></a>
-  &nbsp;|&nbsp;
-  <a href="https://vercel.com/new/clone?repository-url=https://github.com/yxshee/admybrand-dashboard&project-name=admybrand-dashboard&framework=other&root-directory=code">
-    <img src="https://vercel.com/button" alt="Deploy with Vercel" />
-  </a>
-</p>
+
 
 A sleek, responsive, and feature-rich analytics dashboard designed to provide a comprehensive overview of marketing performance. This project showcases a modern frontend stack to create a dynamic and user-friendly interface for data visualization.
 
@@ -25,7 +19,11 @@ A sleek, responsive, and feature-rich analytics dashboard designed to provide a 
 
 ## 🚀 Preview
 
-**Live Demo:** https://yxshdogra-analyticsdashboard.vercel.app/
+
+  <a href="https://yxshdogra-analyticsdashboard.vercel.app/"><strong>Live</strong></a>
+
+
+  </a>
 
 A live version of the dashboard can be run by simply opening the `index.html` file in your browser. For the best experience, use a live server extension in your code editor.
 
@@ -86,11 +84,6 @@ You only need a modern web browser like Google Chrome, Firefox, or Microsoft Edg
 ### 🌐 Deploy to Production
 
 This project is ready for deployment to popular hosting platforms:
-
-#### Quick Deploy Options:
-
-**Vercel (Recommended):**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yxshee/admybrand-dashboard&project-name=admybrand-dashboard&framework=other&root-directory=code)
 
 
 ---
