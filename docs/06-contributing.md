@@ -1,0 +1,14 @@
+# Contributing
+
+1. Fork the repository  
+2. Create a feature branch  
+   ```sh
+   git checkout -b feature/your-feature
+   ```
+3. Make changes & commit  
+   ```sh
+   git commit -m "feat: add new chart type"
+   ```
+4. Push & open a pull request  
+5. Discuss, iterate, and merge  
+6. Follow the existing code style and file structure.

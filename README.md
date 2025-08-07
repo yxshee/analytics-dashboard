@@ -1,135 +1,78 @@
-# 📊 ADmyBRAND Insights - Analytics Dashboard
-<p align="center">
-  <img src="assets/logo.png" alt="ADmyBRAND Logo" width="120" />
-</p>
+# ADmyBRAND Insights
 
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Badge" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Badge" />
-  <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="Chart.js Badge" />
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT" />
-</p>
+A responsive, themeable analytics dashboard.
 
-
-
-A sleek, responsive, and feature-rich analytics dashboard designed to provide a comprehensive overview of marketing performance. This project showcases a modern frontend stack to create a dynamic and user-friendly interface for data visualization.
+## 📖 Documentation Pages
+- [1. Introduction](docs/01-introduction.md)
+- [2. Architecture & File Structure](docs/02-architecture.md)
+- [3. Installation & Setup](docs/03-installation.md)
+- [4. Usage](docs/04-usage.md)
+- [5. Deployment](docs/05-deployment.md)
+- [6. Contributing](docs/06-contributing.md)
 
 ---
 
-## 🚀 Preview
+## Project Overview
+ADmyBRAND Insights is a responsive analytics dashboard that visualizes marketing performance with interactive charts, tables, and real-time data simulation. Built with vanilla JavaScript, Chart.js, and a CSS variables design system, it provides a modular, themeable, and extensible foundation for future enhancements.
 
+## Key Features
+- **Overview Metrics:** Animated cards for revenue, users, conversions, and growth.
+- **Dynamic Charts:** Line, bar, and doughnut charts using Chart.js.
+- **Interactive Table:** Search, sort, filter, paginate, and CSV export.
+- **Real-Time Simulation:** Metrics update every 30 seconds to emulate live data.
+- **Light & Dark Mode:** CSS variables driven theme with persisted preference.
+- **Data Export:** Download charts as PNG and table data as CSV.
+- **Additional Insights:** Recent activities feed and conversion funnel visualization.
 
-  <a href="https://yxshdogra-analyticsdashboard.vercel.app/"><strong>Live</strong></a>
+## Architecture & File Structure
+```
+admybrand-dashboard/
+├── README.md
+├── DOCUMENTATION.md           # This file
+├── DEPLOYMENT.md
+├── AI Usage Report.md
+├── LICENSE
+├── assets/                    # Logos, images, icons
+├── code/
+│   ├── index.html             # Main HTML structure
+│   ├── style.css              # Design system & responsive styles
+│   └── app.js                 # DashboardApp class & logic
+└── admybrand_dashboard_data.json  # Mock data source
+```
 
+### Core Components
+- **DashboardApp (app.js):** Encapsulates data loading, rendering, event handling, and live updates.
+- **CSS Design System (style.css):** Defines color, spacing, typography variables; includes media queries and focus states.
+- **HTML Layout (index.html):** Semantic sections for header, metrics, charts, table, and insights.
 
-  </a>
+## Tech Stack & Concepts
+- **HTML5 & CSS3:** Semantic markup and modern CSS variables for theming.
+- **JavaScript (ES6+):** Class-based architecture, modular functions, and DOM manipulation.
+- **Chart.js:** Configurable chart instances with custom tooltips and responsive behavior.
+- **Local Storage:** Persist theme preference.
+- **Accessibility:** Focus-visible styles, ARIA-friendly icons.
+- **Performance:** Debounced search, pagination, and optimized interval updates.
 
-A live version of the dashboard can be run by simply opening the `index.html` file in your browser. For the best experience, use a live server extension in your code editor.
+## Getting Started
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yxshee/admybrand-dashboard.git
+   ```
+2. Open `code/index.html` in your browser or launch with a live-reload server.
+3. Interact with the dashboard—toggle theme, sort/filter the table, export data.
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/299d8baa-a07f-4e53-ac8f-2723e99127ec" alt="Dashboard Screenshot" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-</p>
+## Deployment
+- **Vercel & Netlify:** Simply point to the `code/` folder; no build step required.
+- **Static Hosting:** Serve `index.html`, `style.css`, `app.js`, and assets from any static host.
 
+Refer to DEPLOYMENT.md for detailed steps.
 
+## Contributing
+Contributions are welcome:
+1. Fork the repo
+2. Create a branch (`git checkout -b feature/...`)
+3. Commit your changes
+4. Open a pull request
 
-
----
-
-## ✨ Key Features
-
-* **📊 Dynamic Data Visualization:** Interactive charts powered by **Chart.js** to visualize revenue trends, user engagement, and traffic sources.
-* **📈 Overview Metrics:** At-a-glance cards for key performance indicators like Revenue, Active Users, and Conversions, with trend indicators.
-* **🎛️ Interactive & Sortable Table:** A detailed table for campaign performance with features like search, filtering by campaign type, and column sorting.
-* **🌓 Light & Dark Mode:** Seamlessly switch between light and dark themes to suit your viewing preference. The selected theme is saved in local storage.
-* **📱 Fully Responsive Design:** The layout adapts beautifully to all screen sizes, from mobile phones to widescreen desktops.
-* **📥 Data Export:** Easily export campaign performance data to a `.csv` file and download charts as `.png` images.
-* **⚡ Real-Time Simulation:** Key metrics update every 30 seconds to simulate a live data feed.
-* **🧩 Modular JavaScript:** The application logic is organized into a `DashboardApp` class for better structure and maintainability.
-* **🎨 Modern UI/UX:** A clean and modern interface built with a custom design system using CSS variables for easy theming and consistency.
-
----
-
-## 🛠️ Tech Stack
-
-* **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-* **Charting Library:** [Chart.js](https://www.chartjs.org/)
-* **Icons:** [Font Awesome](https://fontawesome.com/)
-
----
-
-
-## 🚀 Getting Started
-
-To get a local copy up and running, follow these simple steps.
-
-### Prerequisites
-
-You only need a modern web browser like Google Chrome, Firefox, or Microsoft Edge.
-
-### Installation
-
-1.  **Clone the repository:**
-    ```sh
-    git clone https://github.com/yxshee/admybrand-dashboard.git
-    ```
-2.  **Navigate to the project directory:**
-    ```sh
-    cd admybrand-dashboard
-    ```
-3.  **Open the application:**
-    Navigate to the `code` folder and open the `index.html` file in your web browser.
-    * For a better development experience with hot-reloading, you can use the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension for VS Code.
-
-### 🌐 Deploy to Production
-
-This project is ready for deployment to popular hosting platforms:
-
-
----
-
-## ⚙️ How It Works
-
-The dashboard operates through a combination of semantic HTML, a powerful CSS design system, and a class-based JavaScript architecture.
-
-* **`index.html`**: This file lays out the semantic structure of the dashboard, including sections for the header, overview metrics, charts, tables, and other insights. It links to the CSS stylesheet, JavaScript files, and necessary libraries.
-
-* **`style.css`**: This file contains a complete design system built with CSS variables (`--var-name`). This approach makes it incredibly easy to manage themes (like the light and dark modes) and maintain a consistent design. It also includes all the media queries for a fully responsive layout.
-
-* **`app.js`**: This is the heart of the application.
-    * It's built around the `DashboardApp` class, which encapsulates all the dashboard's functionality.
-    * On initialization (`init`), it loads the data, sets the theme, and calls methods to render all the components.
-    * **`initializeMetrics()`**: Populates the overview cards and animates the numbers for a dynamic effect.
-    * **`initializeCharts()`**: Uses Chart.js to create the revenue, engagement, and traffic source charts from the loaded data.
-    * **`initializeTable()`**: Renders the campaign performance table with sorting, filtering, and pagination logic.
-    * **`initializeEventListeners()`**: Sets up all user interactions, such as theme toggling, searching, and filtering.
-    * **`startRealTimeUpdates()`**: Uses `setInterval` to simulate live data updates for the main metrics.
-
-* **`admybrand_dashboard_data.json`**: This file acts as a mock database, providing all the necessary data that `app.js` fetches and displays on the dashboard.
-
----
-
-## 🤝 Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
-
----
-
-## 📜 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
----
-
-## 🙏 Acknowledgements
-
-* [Chart.js](https://www.chartjs.org/) for the beautiful and easy-to-use charting library.
-* [Font Awesome](https://fontawesome.com/) for the high-quality icons.
-* [Shields.io](https://shields.io/) for the professional README badges.
-
+## License
+Distributed under the MIT License. See `LICENSE` for details.
