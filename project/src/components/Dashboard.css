@@ -1,0 +1,19 @@
+/* Dashboard Layout */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.table-section {
+  background-color: var(--color-surface);
+  padding: var(--spacing-md);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

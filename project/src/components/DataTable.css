@@ -1,0 +1,67 @@
+/* Data Table */
+.data-table {
+  width: 100%;
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.table-controls input {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-muted);
+  border-radius: var(--radius);
+  width: 200px;
+}
+
+.btn-export {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: var(--color-surface);
+  padding: var(--spacing-sm);
+  cursor: pointer;
+  user-select: none;
+}
+
+tbody td {
+  padding: var(--spacing-sm);
+  border-top: 1px solid var(--color-muted);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.pagination button {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: var(--color-muted);
+  cursor: default;
+}
