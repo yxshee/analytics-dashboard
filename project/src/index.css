@@ -1,35 +1,55 @@
 :root {
-  /* Light theme colors */
-  --color-bg: #ffffff;
-  --color-surface: #f8fafc;
+  /* Enhanced Professional Color Palette */
+  --color-bg: #fafbfc;
+  --color-surface: #ffffff;
   --color-surface-elevated: #ffffff;
-  --color-text: #1e293b;
-  --color-text-secondary: #64748b;
-  --color-primary: #3b82f6;
-  --color-primary-hover: #2563eb;
-  --color-accent: #ef4444;
-  --color-accent-hover: #dc2626;
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
+  --color-text: #1a202c;
+  --color-text-secondary: #718096;
+  --color-primary: #667eea;
+  --color-primary-hover: #5a67d8;
+  --color-accent: #f093fb;
+  --color-accent-hover: #f093fb;
+  --color-success: #48bb78;
+  --color-warning: #ed8936;
+  --color-error: #f56565;
+  --color-info: #4299e1;
   --color-border: #e2e8f0;
-  --color-muted: #94a3b8;
+  --color-muted: #a0aec0;
   
-  /* Spacing */
+  /* Gradient Colors */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-success: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  --gradient-warning: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+  --gradient-error: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+  --gradient-info: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  
+  /* Enhanced Spacing System */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
   --spacing-lg: 24px;
   --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
   
-  /* Design tokens */
-  --radius: 12px;
-  --radius-sm: 6px;
+  /* Professional Typography */
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  
+  /* Enhanced Design Tokens */
+  --radius: 16px;
+  --radius-sm: 8px;
+  --radius-lg: 24px;
   --transition-speed: 200ms;
+  --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
+  line-height: 1.6;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -38,22 +58,35 @@
 }
 
 .dark-theme {
-  /* Darker theme colors with improved contrast */
-  --color-bg: #0a0e17;
-  --color-surface: #0f1419;
-  --color-surface-elevated: #1a202c;
-  --color-text: #ffffff;
-  --color-text-secondary: #cbd5e0;
-  --color-primary: #60a5fa;
-  --color-primary-hover: #3b82f6;
-  --color-accent: #f87171;
-  --color-accent-hover: #ef4444;
+  /* Enhanced Dark Theme with Professional Colors */
+  --color-bg: #0f172a;
+  --color-surface: #1e293b;
+  --color-surface-elevated: #334155;
+  --color-text: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-primary: #818cf8;
+  --color-primary-hover: #6366f1;
+  --color-accent: #f472b6;
+  --color-accent-hover: #ec4899;
   --color-success: #34d399;
   --color-warning: #fbbf24;
-  --color-border: #2d3748;
-  --color-muted: #9ca3af;
-  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.7), 0 1px 2px -1px rgb(0 0 0 / 0.7);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.7), 0 4px 6px -4px rgb(0 0 0 / 0.7);
+  --color-error: #f87171;
+  --color-info: #60a5fa;
+  --color-border: #475569;
+  --color-muted: #94a3b8;
+  
+  /* Dark Mode Gradients */
+  --gradient-primary: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+  --gradient-success: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  --gradient-warning: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  --gradient-error: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+  --gradient-info: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  --gradient-accent: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+  
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.8), 0 1px 2px -1px rgb(0 0 0 / 0.8);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.8), 0 2px 4px -2px rgb(0 0 0 / 0.8);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.8), 0 4px 6px -4px rgb(0 0 0 / 0.8);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.8), 0 8px 10px -6px rgb(0 0 0 / 0.8);
 }
 
 /* Global Reset */
@@ -110,20 +143,88 @@ main {
   background-color: var(--color-bg);
 }
 
-/* Cards */
+/* Enhanced Cards with Modern Design */
 .card {
-  background-color: var(--color-surface-elevated);
+  background: var(--color-surface-elevated);
   border-radius: var(--radius);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-xl);
   box-shadow: var(--shadow);
   margin-bottom: var(--spacing-lg);
   border: 1px solid var(--color-border);
-  transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+  transition: all var(--transition-speed) var(--transition-bounce);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity var(--transition-speed);
 }
 
 .card:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Professional stat cards */
+.stat-card {
+  background: var(--color-surface-elevated);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-speed) var(--transition-bounce);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  opacity: 0.1;
+  transition: all var(--transition-speed);
+}
+
+.stat-card.primary::before {
+  background: var(--gradient-primary);
+}
+
+.stat-card.success::before {
+  background: var(--gradient-success);
+}
+
+.stat-card.warning::before {
+  background: var(--gradient-warning);
+}
+
+.stat-card.error::before {
+  background: var(--gradient-error);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
-  transform: translateY(-1px);
+}
+
+.stat-card:hover::before {
+  opacity: 0.2;
+  transform: scale(1.1);
 }
 
 /* Accessible focus styles */
