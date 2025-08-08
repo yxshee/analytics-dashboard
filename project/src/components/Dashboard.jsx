@@ -22,18 +22,44 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard">
+      <div className="dashboard-header">
+        <h1>Welcome back!</h1>
+        <p>Here's what's happening with your business today.</p>
+      </div>
+
+      <div className="stats-overview">
+        <div className="stat-card">
+          <div className="stat-value">$24,567</div>
+          <div className="stat-label">Total Revenue</div>
+        </div>
+        <div className="stat-card accent">
+          <div className="stat-value">1,234</div>
+          <div className="stat-label">New Customers</div>
+        </div>
+        <div className="stat-card success">
+          <div className="stat-value">98.5%</div>
+          <div className="stat-label">Uptime</div>
+        </div>
+        <div className="stat-card warning">
+          <div className="stat-value">156</div>
+          <div className="stat-label">Pending Orders</div>
+        </div>
+      </div>
+
       <div className="charts-grid">
-        <ChartCard title="Revenue">
+        <ChartCard title="Revenue Overview">
           <RevenueChart />
         </ChartCard>
-        <ChartCard title="Engagement">
+        <ChartCard title="User Engagement">
           <EngagementChart />
         </ChartCard>
-        <ChartCard title="Traffic">
+        <ChartCard title="Traffic Sources">
           <TrafficChart />
         </ChartCard>
       </div>
+      
       <div className="table-section">
+        <h2>Recent Transactions</h2>
         <DataTable data={sampleData} />
       </div>
     </div>

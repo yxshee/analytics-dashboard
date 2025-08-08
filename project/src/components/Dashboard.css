@@ -2,18 +2,91 @@
 .dashboard {
   display: flex;
   flex-direction: column;
+  max-width: 1400px;
+}
+
+.dashboard-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.dashboard-header p {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  margin: 0;
 }
 
 .charts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
 }
 
 .table-section {
-  background-color: var(--color-surface);
-  padding: var(--spacing-md);
+  background-color: var(--color-surface-elevated);
+  padding: var(--spacing-xl);
   border-radius: var(--radius);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--color-border);
+}
+
+.table-section h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+/* Stats Overview */
+.stats-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.stat-card {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+  color: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-card.accent {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+}
+
+.stat-card.success {
+  background: linear-gradient(135deg, var(--color-success), #059669);
+}
+
+.stat-card.warning {
+  background: linear-gradient(135deg, var(--color-warning), #d97706);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 500;
 }
