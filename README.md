@@ -1,134 +1,129 @@
-# 📊 ADmyBRAND Insights - Analytics Dashboard
+# 📊 ADmyBRAND Insights – React Dashboard
 <p align="center">
   <img src="assets/logo.png" alt="ADmyBRAND Logo" width="120" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Badge" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Badge" />
+  <img src="https://img.shields.io/badge/React-149ECA?style=for-the-badge&logo=react&logoColor=white" alt="React Badge" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite Badge" />
   <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="Chart.js Badge" />
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT" />
+  <img src="https://img.shields.io/badge/License-CC0%201.0-lightgrey?style=for-the-badge" alt="License: CC0-1.0" />
 </p>
 
-
-
-A sleek, responsive, and feature-rich analytics dashboard designed to provide a comprehensive overview of marketing performance. This project showcases a modern frontend stack to create a dynamic and user-friendly interface for data visualization.
+A sleek, responsive analytics dashboard rebuilt with React + Vite. It mirrors the original UI while adding a componentized architecture, a theme context, and react-chartjs-2 powered charts.
 
 ---
 
 ## 🚀 Preview
 
-
-  <a href="https://yxshdogra-analyticsdashboard.vercel.app/"><strong>Live</strong></a>
-
-
-  </a>
-
-A live version of the dashboard can be run by simply opening the `index.html` file in your browser. For the best experience, use a live server extension in your code editor.
+<a href="https://yxshdogra-analyticsdashboard.vercel.app/"><strong>Live</strong></a>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/299d8baa-a07f-4e53-ac8f-2723e99127ec" alt="Dashboard Screenshot" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </p>
 
-
-
-
 ---
 
-## ✨ Key Features
+## ✨ Features
 
-* **📊 Dynamic Data Visualization:** Interactive charts powered by **Chart.js** to visualize revenue trends, user engagement, and traffic sources.
-* **📈 Overview Metrics:** At-a-glance cards for key performance indicators like Revenue, Active Users, and Conversions, with trend indicators.
-* **🎛️ Interactive & Sortable Table:** A detailed table for campaign performance with features like search, filtering by campaign type, and column sorting.
-* **🌓 Light & Dark Mode:** Seamlessly switch between light and dark themes to suit your viewing preference. The selected theme is saved in local storage.
-* **📱 Fully Responsive Design:** The layout adapts beautifully to all screen sizes, from mobile phones to widescreen desktops.
-* **📥 Data Export:** Easily export campaign performance data to a `.csv` file and download charts as `.png` images.
-* **⚡ Real-Time Simulation:** Key metrics update every 30 seconds to simulate a live data feed.
-* **🧩 Modular JavaScript:** The application logic is organized into a `DashboardApp` class for better structure and maintainability.
-* **🎨 Modern UI/UX:** A clean and modern interface built with a custom design system using CSS variables for easy theming and consistency.
+* Interactive charts: revenue, engagement, and traffic (Chart.js via react-chartjs-2)
+* KPI cards with simulated real-time updates
+* Sort/filter/paginate table + CSV export
+* Light/Dark theme with `ThemeContext`
+* Responsive layout and modern CSS variables
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-* **Charting Library:** [Chart.js](https://www.chartjs.org/)
-* **Icons:** [Font Awesome](https://fontawesome.com/)
+* React + Vite
+* Chart.js v4 with react-chartjs-2
+* CSS modules-by-file (plain CSS per component) and CSS variables
 
 ---
 
+## 📦 Project Structure
 
-## 🚀 Getting Started
+The React app lives in the `code/` directory.
 
-To get a local copy up and running, follow these simple steps.
+```
+code/
+├── index.html
+├── package.json
+├── vite.config.js
+└── src/
+    ├── main.jsx
+    ├── App.jsx
+    ├── contexts/ThemeContext.jsx
+    ├── components/
+    │   ├── Sidebar.jsx, Header.jsx, Dashboard.jsx, Analytics.jsx, Reports.jsx, Settings.jsx
+    │   ├── DataTable.jsx, ChartCard.jsx
+    │   └── charts/RevenueChart.jsx, EngagementChart.jsx, TrafficChart.jsx, TrafficSourcesPieChart.jsx
+    └── styles (co-located .css files)
+```
 
-### Prerequisites
+---
 
-You only need a modern web browser like Google Chrome, Firefox, or Microsoft Edge.
+## 🧑‍� Getting Started
 
-### Installation
+Requires Node.js 18+.
 
-1.  **Clone the repository:**
-    ```sh
-    git clone https://github.com/yxshee/admybrand-dashboard.git
-    ```
-2.  **Navigate to the project directory:**
-    ```sh
-    cd admybrand-dashboard
-    ```
-3.  **Open the application:**
-    Navigate to the `code` folder and open the `index.html` file in your web browser.
-    * For a better development experience with hot-reloading, you can use the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension for VS Code.
+```sh
+git clone https://github.com/yxshee/admybrand-dashboard.git
+cd admybrand-dashboard/code
+npm install
+npm run dev
+```
 
-### 🌐 Deploy to Production
+The app runs at http://localhost:5173 by default.
 
-This project is ready for deployment to popular hosting platforms:
+### Build & Preview
 
+```sh
+cd code
+npm run build
+npm run preview
+```
 
 ---
 
 ## ⚙️ How It Works
 
-The dashboard operates through a combination of semantic HTML, a powerful CSS design system, and a class-based JavaScript architecture.
+* `App.jsx` wires the layout with `Sidebar`, `Header`, and route-like tab switching.
+* `ThemeContext.jsx` controls dark/light mode by toggling a class on `body`.
+* Charts use `react-chartjs-2` with theme-aware colors via CSS variables.
+* `DataTable.jsx` implements client-side search, sort, pagination, and CSV export.
 
-* **`index.html`**: This file lays out the semantic structure of the dashboard, including sections for the header, overview metrics, charts, tables, and other insights. It links to the CSS stylesheet, JavaScript files, and necessary libraries.
+---
 
-* **`style.css`**: This file contains a complete design system built with CSS variables (`--var-name`). This approach makes it incredibly easy to manage themes (like the light and dark modes) and maintain a consistent design. It also includes all the media queries for a fully responsive layout.
+## 🌐 Deployment
 
-* **`app.js`**: This is the heart of the application.
-    * It's built around the `DashboardApp` class, which encapsulates all the dashboard's functionality.
-    * On initialization (`init`), it loads the data, sets the theme, and calls methods to render all the components.
-    * **`initializeMetrics()`**: Populates the overview cards and animates the numbers for a dynamic effect.
-    * **`initializeCharts()`**: Uses Chart.js to create the revenue, engagement, and traffic source charts from the loaded data.
-    * **`initializeTable()`**: Renders the campaign performance table with sorting, filtering, and pagination logic.
-    * **`initializeEventListeners()`**: Sets up all user interactions, such as theme toggling, searching, and filtering.
-    * **`startRealTimeUpdates()`**: Uses `setInterval` to simulate live data updates for the main metrics.
+Typical settings (Vercel/Netlify):
 
-* **`admybrand_dashboard_data.json`**: This file acts as a mock database, providing all the necessary data that `app.js` fetches and displays on the dashboard.
+* Project root: `code`
+* Build command: `npm run build`
+* Output directory: `dist`
+
+For single-page app routing, ensure unknown routes fall back to `/index.html` (Vercel auto-detects; on Netlify use a `_redirects` rule).
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
+1. Fork the repo and create a feature branch
+2. Work in `code/`
+3. Run `npm run lint` and `npm run build`
+4. Open a PR
 
 ---
 
 ## 📜 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Public domain under CC0-1.0. See `LICENSE` for details.
 
 ---
 
 ## 🙏 Acknowledgements
 
-* [Chart.js](https://www.chartjs.org/) for the beautiful and easy-to-use charting library.
-* [Font Awesome](https://fontawesome.com/) for the high-quality icons.
-* [Shields.io](https://shields.io/) for the professional README badges.
+* React, Vite, Chart.js, and react-chartjs-2
+* Shields.io for badges

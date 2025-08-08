@@ -5,7 +5,7 @@
 </p>
 
 # 📝 Report Overview
-This report details how AI tools were leveraged throughout the development of the ADmyBRAND Insights Dashboard. It covers the tools used, key interactions, prompt examples, work distribution, and lessons learned.
+This report details how AI tools were leveraged throughout the development of the React-based ADmyBRAND Insights Dashboard (React + Vite). It covers the tools used, key interactions, prompt examples, work distribution, and lessons learned.
 
 ## 🛠️ AI Tools & Extensions
 | Tool             | Role & Contribution                                           |
@@ -18,8 +18,8 @@ This report details how AI tools were leveraged throughout the development of th
 > Below are the primary feature areas and how AI accelerated each step.
 >
 > 1. **Project Scaffold**  
->    - Prompt: “Generate a vanilla JS dashboard scaffold with Chart.js integration and responsive layout.”  
->    - Outcome: Base HTML/CSS structure, initial Chart.js setup.  
+>    - Prompt: “Generate a React (Vite) dashboard scaffold with react-chartjs-2 integration and responsive layout.”  
+>    - Outcome: React component structure, Vite config, initial chart setup.  
 >
 > 2. **Theme System & CSS Design**  
 >    - Prompt: “Create a CSS variables design system supporting light/dark mode with focus states.”  
@@ -30,12 +30,12 @@ This report details how AI tools were leveraged throughout the development of th
 >    - Outcome: `initializeTable`, `filterAndSearch`, `sortTable`, and export logic.  
 >
 > 4. **Dynamic Charts & Real-Time Simulation**  
->    - Prompt: “Write functions to render revenue, user engagement, and traffic charts, plus simulated real-time updates.”  
->    - Outcome: Chart.js instances configured with custom tooltips and live data pulses.  
+>    - Prompt: “Build React components for revenue, engagement, and traffic charts with simulated real-time updates.”  
+>    - Outcome: `react-chartjs-2` components configured with custom options and periodic data updates.  
 >
 > 5. **Documentation & Deployment**  
->    - Prompt: “Draft README with project overview, setup, tech stack, and add Vercel/Netlify deployment guide.”  
->    - Outcome: Comprehensive README, `vercel.json` and `netlify.toml` configs, deployment checklist.
+>    - Prompt: “Draft README with project overview, setup (Node + Vite), tech stack, and Vercel/Netlify guide.”  
+>    - Outcome: Updated README/docs for React app, deployment settings for `npm run build` and SPA routing.
 
 ## ✏️ Sample Prompts & AI Responses
 > Below are representative prompts and summarized responses.

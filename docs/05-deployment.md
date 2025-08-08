@@ -1,11 +1,25 @@
-# Deployment
+# Deployment (React)
 
-## Static Hosting  
-- Simply deploy the contents of the `code/` folder.
+## Build
+From the `code/` directory:
 
-## Vercel / Netlify  
-- Point to the `code/` directory; no build step required.
+```sh
+npm run build
+```
 
-## Custom Domain  
-1. Add your domain in provider settings  
-2. Ensure `index.html`, `style.css`, `app.js` are served at root
+Artifacts are output to `code/dist`.
+
+## Vercel
+- Project root: `code`
+- Build command: `npm run build`
+- Output directory: `dist`
+- SPA routing: default is fine; ensure a fallback to `/index.html` for client-side navigation.
+
+## Netlify
+- Base directory: `code`
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Add a `_redirects` file with `/* /index.html 200` for SPA routing if needed.
+
+## Custom Domain
+Attach your domain via your hosting provider and point it to the deployed app.
