@@ -35,7 +35,38 @@ export default function RevenueChart() {
 
   return (
     <div className="chart-container">
-      <Line data={chartData} options={{ responsive: true, maintainAspectRatio: false }} />
+      <Line 
+        data={chartData} 
+        options={{ 
+          responsive: true, 
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              labels: {
+                color: 'var(--color-text)'
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: 'var(--color-text-secondary)'
+              },
+              grid: {
+                color: 'var(--color-border)'
+              }
+            },
+            y: {
+              ticks: {
+                color: 'var(--color-text-secondary)'
+              },
+              grid: {
+                color: 'var(--color-border)'
+              }
+            }
+          }
+        }} 
+      />
     </div>
   );
 }

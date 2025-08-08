@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
+import './App.css'
 import Sidebar from './components/Sidebar'
 import Header from './components/Header'
 import Dashboard from './components/Dashboard'
 import Analytics from './components/Analytics'
 import Reports from './components/Reports'
 import Settings from './components/Settings'
-import './App.css'
 
 function App() {
   const [activeTab, setActiveTab] = useState('dashboard')
@@ -26,12 +26,14 @@ function App() {
   }
 
   return (
-    <div className="app-container">
+    <div className="app">
       <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <Header />
-      <main>
-        {renderContent()}
-      </main>
+      <div className="main-content">
+        <Header />
+        <main className="content">
+          {renderContent()}
+        </main>
+      </div>
     </div>
   )
 }
