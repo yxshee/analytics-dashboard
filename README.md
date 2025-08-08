@@ -19,8 +19,10 @@ A sleek, responsive analytics dashboard rebuilt with React + Vite. It mirrors th
 <a href="https://yxshdogra-analyticsdashboard.vercel.app/"><strong>Live</strong></a>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/299d8baa-a07f-4e53-ac8f-2723e99127ec" alt="Dashboard Screenshot" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="image.png" alt="Dashboard Screenshot" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </p>
+
+
 
 ---
 
