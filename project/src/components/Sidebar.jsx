@@ -2,10 +2,10 @@ import React from 'react';
 import './Sidebar.css';
 
 const menuItems = [
-  { id: 'dashboard', label: 'Dashboard', icon: '📊' },
-  { id: 'analytics', label: 'Analytics', icon: '📈' },
-  { id: 'reports', label: 'Reports', icon: '📋' },
-  { id: 'settings', label: 'Settings', icon: '⚙️' }
+  { id: 'dashboard', label: 'Dashboard' },
+  { id: 'analytics', label: 'Analytics' },
+  { id: 'reports', label: 'Reports' },
+  { id: 'settings', label: 'Settings' }
 ];
 
 export default function Sidebar({ activeTab, setActiveTab }) {
@@ -26,7 +26,6 @@ export default function Sidebar({ activeTab, setActiveTab }) {
                   setActiveTab(item.id);
                 }}
               >
-                <span className="icon">{item.icon}</span>
                 {item.label}
               </a>
             </li>

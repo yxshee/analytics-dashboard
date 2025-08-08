@@ -1,4 +1,5 @@
 import React from 'react';
+import TrafficSourcesPieChart from './charts/TrafficSourcesPieChart';
 import './Analytics.css';
 
 export default function Analytics() {
@@ -44,15 +45,7 @@ export default function Analytics() {
         
         <div className="card analytics-chart">
           <h3>Traffic Sources</h3>
-          <div className="chart-placeholder">
-            <p>🥧 Pie chart showing traffic sources:</p>
-            <ul>
-              <li>Direct: 45%</li>
-              <li>Search: 35%</li>
-              <li>Social: 15%</li>
-              <li>Email: 5%</li>
-            </ul>
-          </div>
+          <TrafficSourcesPieChart />
         </div>
       </div>
     </div>
