@@ -20,7 +20,7 @@ export default function EngagementChart() {
     const interval = setInterval(() => {
       setChartData(prev => {
         const nextValue = Math.floor(50 + Math.random() * 50);
-        const nextLabels = prev.labels.map((lbl, i) => lbl);
+        const nextLabels = prev.labels.map((lbl) => lbl);
         const nextData = [...prev.datasets[0].data.slice(1), nextValue];
         return {
           labels: nextLabels,
