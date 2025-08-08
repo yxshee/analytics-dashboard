@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
+import { exportToPDF, exportJSONToCSV } from '../utils/exportUtils';
 import './Reports.css';
 
 export default function Reports() {
-  const reports = [
+  const initialReports = [
     {
       id: 1,
       title: 'Monthly Performance Report',
@@ -37,6 +38,9 @@ export default function Reports() {
     }
   ];
 
+  const [reports, setReports] = useState(initialReports);
+  const [toast, setToast] = useState('');
+
   const getStatusColor = (status) => {
     switch (status) {
       case 'Ready': return 'var(--color-success)';
@@ -46,12 +50,66 @@ export default function Reports() {
     }
   };
 
+  const showToast = (msg) => {
+    setToast(msg);
+    setTimeout(() => setToast(''), 2000);
+  };
+
+  const generateReport = () => {
+    const id = Math.max(0, ...reports.map(r => r.id)) + 1;
+    const newReport = {
+      id,
+      title: 'Generated Report',
+      description: 'Auto-generated summary based on current filters',
+      date: new Date().toLocaleString('en-US', { month: 'long', year: 'numeric' }),
+      status: 'Processing',
+      format: Math.random() > 0.5 ? 'PDF' : 'Excel'
+    };
+    setReports([newReport, ...reports]);
+    showToast('Report generation started');
+    // Simulate processing
+    setTimeout(() => {
+      setReports(prev => prev.map(r => r.id === id ? { ...r, status: 'Ready' } : r));
+      showToast('Report is ready');
+    }, 1500);
+  };
+
+  const sampleRows = useMemo(() => (
+    [
+      { metric: 'Revenue', value: 2847650, change: '+12.5%' },
+      { metric: 'Active Users', value: 34567, change: '+8.2%' },
+      { metric: 'Conversion Rate', value: '3.42%', change: '-0.1%' },
+    ]
+  ), []);
+
+  const handleDownload = async (reportId) => {
+    const report = reports.find(r => r.id === reportId);
+    if (!report || report.status !== 'Ready') return;
+    if (report.format === 'PDF') {
+      // export a specific card area: create a temp container
+      const tempId = `report-${reportId}-export`;
+      const temp = document.createElement('div');
+      temp.id = tempId;
+      temp.style.padding = '16px';
+      temp.style.background = '#fff';
+      temp.innerHTML = `<h1 style="margin:0 0 8px 0;">${report.title}</h1><p style="margin:0 0 12px 0;">${report.description}</p>` +
+        `<table style="width:100%; border-collapse:collapse;">` +
+        sampleRows.map(r => `<tr><td style="border:1px solid #ccc; padding:6px;">${r.metric}</td><td style="border:1px solid #ccc; padding:6px;">${r.value}</td><td style="border:1px solid #ccc; padding:6px;">${r.change}</td></tr>`).join('') +
+        `</table>`;
+      document.body.appendChild(temp);
+      await exportToPDF(tempId, report.title.replace(/\s+/g, '-').toLowerCase());
+      document.body.removeChild(temp);
+    } else {
+      exportJSONToCSV(sampleRows, report.title.replace(/\s+/g, '-').toLowerCase() + '.csv');
+    }
+  };
+
   return (
     <div className="reports-page">
       <div className="page-header">
         <h1>Reports</h1>
         <p>Generate and download comprehensive reports</p>
-        <button className="btn-primary">Generate New Report</button>
+        <button className="btn-primary" onClick={generateReport}>Generate New Report</button>
       </div>
       
       <div className="reports-filters">
@@ -77,7 +135,7 @@ export default function Reports() {
       
       <div className="reports-list">
         {reports.map(report => (
-          <div key={report.id} className="card report-card">
+          <div key={report.id} className="card report-card" id={`report-card-${report.id}`}>
             <div className="report-info">
               <h3>{report.title}</h3>
               <p>{report.description}</p>
@@ -94,12 +152,13 @@ export default function Reports() {
                 {report.status}
               </span>
               {report.status === 'Ready' && (
-                <button className="btn-download">Download</button>
+                <button className="btn-download" onClick={() => handleDownload(report.id)}>Download</button>
               )}
             </div>
           </div>
         ))}
       </div>
+      {toast && <div className="toast" role="status" aria-live="polite">{toast}</div>}
     </div>
   );
 }
